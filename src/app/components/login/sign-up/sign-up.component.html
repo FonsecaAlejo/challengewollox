@@ -1,0 +1,109 @@
+<div class="container">
+    <div class="products-sale">
+      <div class="description-product">
+          <figure>
+              <img src="" alt="">
+          </figure>
+          <div class="description-details">
+              <h1>Registrarse</h1>
+              <p>Llene todos los campos para poder dar de alta el usuario
+              </p>
+          </div>
+      </div>
+
+      <div class="description-product">
+        <form autocomplete="off" [formGroup]="form" (ngSubmit)="onSubmit()">
+
+          <label for="name">Nombre</label>
+          <br>
+          <input  type="text" 
+                  placeholder="" 
+                  formControlName="name"
+                  [class.invalid]="nameInvalid">
+          <br>
+
+          <label for="lastName">Apellido</label>
+          <br>
+          <input  type="text" 
+                  placeholder="" 
+                  formControlName="lastName"
+                  [class.invalid]="lastNameInvalid">
+          <br>
+
+          <label for="country">Pais</label>
+          <br>
+          <select formControlName="country" 
+                  (ngModelChange)="getProvinces($event)"
+                  [class.invalid]="countryInvalid">
+            <option [ngValue]="null">Seleccione una opción</option>
+            <option *ngFor="let item of countries"
+                    [ngValue]="item">
+                    {{ item.name }}
+            </option>          
+          </select>
+          <br>
+
+          <label for="province">Provincia</label>
+          <br>
+          <select formControlName="province"
+                  [attr.disabled]="disabledProv ? '' : null"
+                  [class.invalid]="provinceInvalid">
+            <option [ngValue]="null">Seleccione una opción</option>
+            <option *ngFor="let item of provinces"
+                    [value]="item">
+                    {{ item }}
+            </option> 
+          </select>
+          <br>
+
+          <label for="email">E-mail</label>
+          <br>
+          <input  type="email" 
+                  placeholder="" 
+                  formControlName="email"
+                  [class.invalid]="emailInvalid">
+          <br>
+
+          <label for="phone">Teléfono</label>
+          <br>
+          <input type="number"
+                 placeholder="" 
+                 formControlName="phone"
+                 [class.invalid]="phoneInvalid">
+          <br>
+
+          <label for="password">Contraseña</label>
+          <br>
+          <input type="password"
+                 placeholder=""
+                 formControlName="password"
+                 [class.invalid]="passInvalid">
+          <br>
+
+          <label for="confirmPassword">Confirmar contraseña</label>
+          <br>
+          <input type="password"
+                 placeholder="" 
+                 formControlName="confirmPassword"
+                 [class.invalid]="confirmPassInvalid">
+          <br>
+
+          <label for="aceptConditions">Aceptar terminos y condiciones</label>
+          <br>
+          <input type="checkbox"
+                 placeholder="" 
+                 formControlName="aceptConditions"
+                 [class.invalidCheckbox]="aceptConditionsInvalid">
+          <br>
+
+          <button class="main_button"
+                   type="submit"
+                   [disabled]="form.invalid">Confirmar pago</button>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <p>Status: {{form.status}}</p>
