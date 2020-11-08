@@ -60,7 +60,11 @@ export class AuthService {
 
   statusAuthentication(){
 
-    return this.userToken.length > 2;
+    if(this.userToken.length < 10){
+      return false;
+    }
+
+    return true;
 
   }
 }
