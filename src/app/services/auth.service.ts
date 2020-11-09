@@ -28,7 +28,6 @@ export class AuthService {
       user
     ).pipe(
       map(resp => {
-        console.log("Entro en el mapa de rxjs")
         this.saveToken(resp['token']);
         return resp;
       })
@@ -60,11 +59,13 @@ export class AuthService {
 
   statusAuthentication(){
 
-    if(this.userToken.length < 10){
-      return false;
+    if( this.userToken === localStorage.getItem('token') ){
+
+      return true;
+
     }
 
-    return true;
+    return false;
 
   }
 }

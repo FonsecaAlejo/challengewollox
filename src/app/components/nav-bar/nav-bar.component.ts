@@ -1,5 +1,6 @@
 import { Component, OnInit, DoCheck } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthGuard } from 'src/app/guards/auth.guard';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -12,21 +13,21 @@ export class NavBarComponent implements OnInit, DoCheck {
   auth: boolean;
 
   constructor(private authService: AuthService,
-              private router: Router) {}
+              private router: Router,
+              private authGuard: AuthGuard) {}
 
   ngOnInit(): void {
   }
-
+  
   ngDoCheck(): void {
-
-    this.auth = this.authService.statusAuthentication();
     
+    this.auth = this.authService.statusAuthentication();   
   }
 
   logOut(){
+
     this.authService.logOut();
-    this.router.navigateByUrl('/sign-up');
-    this.auth = false;
+    this.router.navigateByUrl('/home');
   }
 
 

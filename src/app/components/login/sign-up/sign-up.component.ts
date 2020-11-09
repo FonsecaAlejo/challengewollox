@@ -127,7 +127,7 @@ export class SignUpComponent implements OnInit {
       this.usuario.password =  this.form.value.password;
 
       this.authService.signUp(this.usuario).subscribe( data => {
-        this.router.navigateByUrl('/home');
+        this.router.navigateByUrl('/technology-list');
       }, (error) => {
         console.log("Error al autenticar")
       });

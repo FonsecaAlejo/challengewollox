@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { LoginModule } from './components/login/login.module';
 import { HomeComponent } from './components/home/home.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { TechnologyListComponent } from './components/technology-list/technology-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavBarComponent,
+    TechnologyListComponent,
   ],
   imports: [
     BrowserModule,

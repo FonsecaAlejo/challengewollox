@@ -4,12 +4,13 @@
              <i class="fa fa-bars fa-2x"></i>
           </div>
           <div class="logo">
-             <img src="../../../assets/logo_full_color.svg" alt="">
+             <a routerLink='home'><img src="../../../assets/logo_full_color.svg" alt=""></a>
           </div>
           <div class="menu">
              <ul>
-                <li *ngIf="!auth"><a routerLink='home'>Sign up</a></li>
+                <li *ngIf="!auth" routerLinkActive="activo"><a routerLink='sign-up' >Sign up</a></li>
                 <li *ngIf="auth"><a style="cursor: pointer;" (click)="logOut()">Salir</a></li>
+                <li *ngIf="auth" routerLinkActive="activo"><a routerLink="technology-list">Lista de tecnologías</a></li>
              </ul>
           </div>
        </nav>
