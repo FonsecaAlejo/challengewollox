@@ -36,33 +36,6 @@ html,body{
     background-position-y: 10%;
   }
   
-  nav{
-    display: flex;
-    background-color: var(--green-color);
-    padding: var(--space);
-    color: white;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  nav ul{
-    display: flex;
-  }
-  
-  nav li{
-    padding-left: 20px;
-    list-style: none;
-  }
-  
-  nav li a{
-    color: var(--black-color);
-  text-decoration: none;
-  }
-  
-  nav li a:hover{
-    color: white;
-  }
-  
   /* ---------------------Main section */
   
   .main_section{
