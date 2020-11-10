@@ -22,14 +22,10 @@ export class TechnologyListComponent implements OnInit {
 
   getTechnologyList(){
 
-
     this.techService.getTechnologyList().subscribe( (resp: TechnologyModel[]) => {
 
       this.tech = resp;
-
-      console.log(this.tech);
     })
-   
   }
 
   searchTechnology(search: string){
@@ -38,22 +34,12 @@ export class TechnologyListComponent implements OnInit {
       return;
     }
 
-    console.log(search);
-
     this.searchTech = this.techService.searchTechnology(search, this.tech);
-
-    console.log(this.searchTech);
-
-    if(this.searchTech.length == 0){
-      console.log("ESTOY VACÍOOOOOO")
-    }
-
   }
 
   likeTech(item: TechnologyModel){
 
     this.techService.likeTech(item);
-
   }
 
 }

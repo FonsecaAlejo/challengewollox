@@ -11,6 +11,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class NavBarComponent implements OnInit, DoCheck {
 
   auth: boolean;
+  favoriteTech: string[];
 
   constructor(private authService: AuthService,
               private router: Router,
@@ -21,13 +22,21 @@ export class NavBarComponent implements OnInit, DoCheck {
   
   ngDoCheck(): void {
     
-    this.auth = this.authService.statusAuthentication();   
+    this.auth = this.authService.statusAuthentication();
+
+    this.favoriteTech = this.technologyFavorite();
+
   }
 
   logOut(){
 
     this.authService.logOut();
     this.router.navigateByUrl('/home');
+  }
+
+  technologyFavorite(){
+    
+    return JSON.parse(localStorage.getItem("likeTech"));
   }
 
 
