@@ -9,8 +9,8 @@
           <div class="menu">
              <ul>
                 <li *ngIf="!auth" routerLinkActive="activo"><a routerLink='sign-up' >Sign up</a></li>
-                <li *ngIf="auth"><a style="cursor: pointer;" (click)="logOut()">Salir</a></li>
                 <li *ngIf="auth" routerLinkActive="activo"><a routerLink="technology-list">Lista de tecnologías</a></li>
+                <li *ngIf="auth"><a style="cursor: pointer;" (click)="logOut()">Salir</a></li>
              </ul>
           </div>
        </nav>
