@@ -1,9 +1,41 @@
+.content{
+    max-width: 1800px;
+}
+
+/* Section Hero */
+/* ---------------------------------- */
 .hero{
     background: url(../../../assets/Backgrounds/Bg_Header.png);
-    height: 600px;
+    height: 100vh;
     position: absolute;
+    overflow: hidden;
 }
 
 .welcome{
-    margin-top: 60px;
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.welcome h1{
+    font-size: 3em;
+    font-weight: 100;
+    width: 10em;
+}
+
+.wolox-font{
+    color: #97CF00;
+}
+
+.welcome img{
+    width: 40em;
+    height: 40em;
+
+}
+
+.follow{
+    background-color: #F2F5FA;
+    overflow: hidden;
 }

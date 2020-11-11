@@ -1,8 +1,9 @@
  @import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;600&display=swap'); /*Fuente Asap de Google*/
+ @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600&display=swap'); /*Fuente Fira Sans de Google*/
 
 html,body{
     padding: 0px;
     margin: 0px;
     font-size: 16px;
-    font-family: 'Asap', sans-serif;
+    font-family: 'Fira Sans', sans-serif;;
 }
