@@ -1,0 +1,9 @@
+.hero{
+    background: url(../../../assets/Backgrounds/Bg_Header.png);
+    height: 600px;
+    position: absolute;
+}
+
+.welcome{
+    margin-top: 60px;
+}
