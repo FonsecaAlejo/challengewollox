@@ -1,110 +1,133 @@
+<section class="sign-up">
+        <div class="container">
+                <div class="box-wolox">
+                        <div>
+                                <h1 class="text-blue">Registrarse</h1>
+                                <p class="">Llene todos los campos para poder dar de alta el usuario</p>
+                        </div>
+                        <figure>
+                                <img src="../../../../assets/Ic_Wolox_Footer.svg" alt="">
+                        </figure>
+                </div>
 
-<div class="container">
-    <div class="products-sale">
-      <div class="description-product">
-          <figure>
-              <img src="" alt="">
-          </figure>
-          <div class="description-details">
-              <h1>Registrarse</h1>
-              <p>Llene todos los campos para poder dar de alta el usuario
-              </p>
-          </div>
-      </div>
+                <div class="box-form">
+                        <form autocomplete="off" [formGroup]="form" (ngSubmit)="onSubmit()">
+                                <div class="content-fields">
 
-      <div class="description-product">
-        <form autocomplete="off" [formGroup]="form" (ngSubmit)="onSubmit()">
 
-          <label for="name">Nombre</label>
-          <br>
-          <input  type="text" 
-                  placeholder="" 
-                  formControlName="name"
-                  [class.invalid]="nameInvalid">
-          <br>
+                                        <div class="field-box">
+                                                <div class="field">
+                                                        <input type="text" placeholder="Nombre" 
+                                                                class="input"
+                                                                formControlName="name"
+                                                                [class.invalid-field]="nameInvalid">
+                                                        <span *ngIf="nameInvalid" class="invalid-span">Nombre
+                                                                inválido</span>
 
-          <label for="lastName">Apellido</label>
-          <br>
-          <input  type="text" 
-                  placeholder="" 
-                  formControlName="lastName"
-                  [class.invalid]="lastNameInvalid">
-          <br>
+                                                </div>
 
-          <label for="country">Pais</label>
-          <br>
-          <select formControlName="country" 
-                  (ngModelChange)="getProvinces($event)"
-                  [class.invalid]="countryInvalid">
-            <option [ngValue]="null">Seleccione una opción</option>
-            <option *ngFor="let item of countries"
-                    [ngValue]="item">
-                    {{ item.name }}
-            </option>          
-          </select>
-          <br>
+                                                <div class="field">
+                                                        <input type="text" placeholder="Apellido" 
+                                                                class="input"
+                                                                formControlName="lastName"
+                                                                [class.invalid-field]="lastNameInvalid">
+                                                        <span *ngIf="lastNameInvalid" class="invalid-span">Apellido
+                                                                inválido</span>
 
-          <label for="province">Provincia</label>
-          <br>
-          <select formControlName="province"
-                  [attr.disabled]="disabledProv ? '' : null"
-                  [class.invalid]="provinceInvalid">
-            <option [ngValue]="null">Seleccione una opción</option>
-            <option *ngFor="let item of provinces"
-                    [value]="item">
-                    {{ item }}
-            </option> 
-          </select>
-          <br>
+                                                </div>
 
-          <label for="email">E-mail</label>
-          <br>
-          <input  type="email" 
-                  placeholder="" 
-                  formControlName="email"
-                  [class.invalid]="emailInvalid">
-          <br>
+                                                <div class="field">
+                                                        <select formControlName="country" 
+                                                                class="input"
+                                                                (ngModelChange)="getProvinces($event)"
+                                                                [class.invalid-field]="countryInvalid">
+                                                                <option [ngValue]="null">Seleccione un Pais</option>
+                                                                <option *ngFor="let item of countries" [ngValue]="item">
+                                                                        {{ item.name }}
+                                                                </option>
+                                                        </select>
+                                                        <span *ngIf="countryInvalid" class="invalid-span">Pais
+                                                                inválido</span>
 
-          <label for="phone">Teléfono</label>
-          <br>
-          <input type="number"
-                 placeholder="" 
-                 formControlName="phone"
-                 [class.invalid]="phoneInvalid">
-          <br>
+                                                </div>
 
-          <label for="password">Contraseña</label>
-          <br>
-          <input type="password"
-                 placeholder=""
-                 formControlName="password"
-                 [class.invalid]="passInvalid">
-          <br>
+                                                <div class="field">
+                                                        <select formControlName="province" 
+                                                                class="input"
+                                                                [attr.disabled]="disabledProv ? '' : null"
+                                                                [class.invalid-field]="provinceInvalid">
+                                                                <option [ngValue]="null">Seleccione una opción</option>
+                                                                <option *ngFor="let item of provinces" [value]="item">
+                                                                        {{ item }}
+                                                                </option>
+                                                        </select>
+                                                        <span *ngIf="provinceInvalid" class="invalid-span">Provincia
+                                                                inválida</span>
 
-          <label for="confirmPassword">Confirmar contraseña</label>
-          <br>
-          <input type="password"
-                 placeholder="" 
-                 formControlName="confirmPassword"
-                 [class.invalid]="confirmPassInvalid">
-          <br>
+                                                </div>
+                                        </div>
 
-          <label for="aceptConditions">Aceptar terminos y condiciones</label>
-          <br>
-          <input type="checkbox"
-                 placeholder="" 
-                 formControlName="aceptConditions"
-                 [class.invalidCheckbox]="aceptConditionsInvalid">
-          <br>
+                                        <div class="field-box">
+                                                <div class="field">
 
-          <button class="main_button"
-                   type="submit"
-                   [disabled]="form.invalid">Confirmar pago</button>
+                                                        <input type="email" placeholder="E- mail" 
+                                                                class="input"
+                                                                formControlName="email"
+                                                                [class.invalid-field]="emailInvalid">
+                                                        <span *ngIf="emailInvalid" class="invalid-span">E-mail
+                                                                inválido</span>
+                                                </div>
 
-        </form>
+                                                <div class="field">
+                                                        <input type="number" placeholder="Télefono" 
+                                                                class="input"
+                                                                formControlName="phone"
+                                                                [class.invalid-field]="phoneInvalid">
+                                                        <span *ngIf="phoneInvalid" class="invalid-span">Teléfono
+                                                                inválido</span>
 
-      </div>
-    </div>
-  </div>
+                                                </div>
 
-  <p>Status: {{form.status}}</p>
+                                                <div class="field">
+                                                        <input type="password"
+                                                                placeholder="Contraseña (Seis carácteres,una letra y un número)"
+                                                                class="input" 
+                                                                formControlName="password"
+                                                                [class.invalid-field]="passInvalid">
+                                                        <span *ngIf="passInvalid" class="invalid-span">Contraseña
+                                                                inválida</span>
+
+                                                </div>
+
+                                                <div class="field">
+                                                        <input type="password" 
+                                                                placeholder="Repetir contraseña"
+                                                                class="input" 
+                                                                formControlName="confirmPassword"
+                                                                [class.invalid-field]="confirmPassInvalid">
+                                                        <span *ngIf="confirmPassInvalid" class="invalid-span">Contraseña
+                                                                inválida</span>
+
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="footer-form">
+                                        <div>
+                                                <input type="checkbox" 
+                                                        class="checkbox"
+                                                        formControlName="aceptConditions"
+                                                        [class.invalidCheckbox]="aceptConditionsInvalid">
+                                                <label for="aceptConditions">Aceptar terminos y condiciones</label>
+                                        </div>
+
+                                        <button class="button-blue" 
+                                                type="submit" 
+                                                [disabled]="form.invalid"
+                                                [class.disabled]="form.invalid">Registrarse</button>
+                                </div>
+
+                        </form>
+
+                </div>
+        </div>
+</section>

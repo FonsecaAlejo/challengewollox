@@ -1,200 +1,128 @@
-/* ------------------Variables */
-:root{
-    --green-color:#7acc2d;
-    --white-color:white;
-    --black-color:#313337;
-    /* Tipografía */
-    --normal:12px;
-    /* Espaciado */
-    --space:10px;
-    /* Box shadow */
-    --box:0 0 1px #c1bcbc;
-  
-  }
-
-  /* ------------------Variables */
-  
-  .container{
-      max-width: 1100px;
-      margin: auto;
-  }
-  
-  .background{
-    background-image: url(../../../../assets/images/curve.png);
-    background-size: contain;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-position-y: 10%;
-  }
-  
-  /* ---------------------Main section */
-  
-  .main_section{
-    padding: 5% 15%;
-    text-align: center;
-  }
-  
-  .products{
-    /* background-image: url(../images/curve.png);
-    background-size: cover;
-    background-position: center top; */
-    overflow: hidden;
-    padding: 0% 20%;
-    display: flex;
-    min-height: 350px;
-  }
-  
-  .product{
-    padding: 10px;
-  }
-  
-  .product .content{
-    background-color: white;
-    padding: 15px;
-    box-shadow: 0 0 1px #c1bcbc;
-  }
-  
-  .products-sale{
-      display: flex;
-      justify-content: center;
-  }
-  
-  .description-product{
-      margin: 10% 1%;
-      width: 30%;
-      padding: 1%;
-      box-shadow: 0px 3px 6px #c1bcbc;
-  }
-  
-  .description-product figure{
-      width: 50%;
-      margin: auto;
-  }
-  
-  .description-product img{
-      width: 100%;
-  }
-  .img_content{
-    text-align: center;
-  }
-  
-  .main_button{
-    background-color: #7acc2d;
-    width: 100%;
-    padding: 10px;
-    font-size: 17px;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 2px;
-  }
-  .main_button:hover{
-    background-color: #5e9e22;
-  }
-  
-  /* Animations */
-  .fadeInDown{
-    -webkit-animation-duration: 1s;
-    animation-duration:1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-name: fadeInDown;
-    animation-name: fadeInDown;
+.sign-up{
+  background: url(.././../../../assets/Backgrounds/Bg_Header@3x.png);
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-  /* ------------------Properties */
-  .properties{
-    display: flex;
-    justify-content: space-between;
-    margin: 3% 5%;
-  }
-  .properties .article .details{
-    text-align: center;
-  }
-  .article{
-    display: grid;
-    grid-template-rows: repeat(2,auto);
-    justify-items: center;
-  
-  }
-  .figure{
-    margin: 0;
-    padding: 0;
-    width: 138px;
-    height: 113px;
-    text-align: center;
-  }
-  .figure img{
+  .container{
+    max-width: 1900px;
+    margin: auto;
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
-  .details{
+
+  .box-wolox{
+      margin: 10% 1%;
+      padding: 2%;
+      border-radius: 1em;
+      box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
+      display: flex;
+      flex-direction: column;
+  }
+
+  .box-wolox div{
+    width: 25em;
+  }
+
+  .box-wolox h1{
+    font-size: 3em;
+  }
+
+  .box-wolox p{
+    font-size: 1.5em;
+  }
+    
+  .box-wolox figure{
+      width: 100%;
+      margin: auto;
+  }
+  
+  .box-wolox img{
+      width: 100%;
+  }
+
+  .box-form{
+      margin: 10% 1%;
+      padding: 2%;
+      border-radius: 1em;
+      box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
+  }
+
+  .content-fields{
+    display: flex;
+  }
+
+  .field-box{
+    width: 22em;
+    margin: 0 1em;
+  }
+
+  .field{
+    margin: 1em;
     width: auto;
-    height: auto;
-    margin: 3%;
-  }
-  .details h3{
-    font-weight: bold;
-    font-size: 17px;
-    color: #313337;
-  }
-  .details p{
-    color: #313337;
-  }
-  
-  /* ----------------------Mentions */
-  .mentions{
-    display: grid;
-    grid-template-rows: 105.44px auto;
-    grid-template-columns: repeat(4,240px);
-    margin: 5% 0 ;
-    margin-bottom: 30px;
-    justify-content: space-between;
-    padding: 0% 5%;
-  }
-  .mentions .article{
-    border-radius: 2px;
-    box-shadow: 0px 3px 6px #c1bcbc;
-  }
-  .mentions figure{
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  .mentions h1{
-    grid-column-end: span 4;
-    justify-self: center;
-    font-size: 30px;
-    color: #313337;
-  }
-  .mentions h3{
-    margin: 0 0 1% 0;
-  }
-  .mentions p{
-    margin: 0%;
-    color: #313337;
-  }
-  
-  /* -------------------------Footer */
-  footer{
-    background-color: #313337;
+    height: 5em;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
   }
-  footer a{
-    color: white;
-    margin: 22px 17px;
-    text-decoration: none;
+
+  .field label{
+    width: 100%;
+    margin-bottom: 1em;
   }
-  
-  .invalid {
-    border: 1px solid red;
+
+  .field input{
+    width: 100%;
+    margin-top: .5em;
+    height: 2.5em;
   }
-  
-  .invalidCheckbox{
-    outline: 1px solid red
+
+  .field select{
+    width: 100%;
+    margin-top: .5em;
+    height: 2.5em;
   }
-  
-  textarea:focus, input:focus{
+
+  .field input:focus{
+    border: 1px solid #2AA7DF;
     outline: none;
   }
-  
+
+  .field select:focus{
+    border: 1px solid #2AA7DF;
+    outline: none;
+  }
+
+  .field select{
+    height: 4em !important;
+  }
+
+  .checkbox{
+    cursor: pointer;
+  }
+
+  .disabled{
+    pointer-events: none;
+    border: 1px solid rgba(144, 144, 144, 0.25);
+    color: rgba(144, 144, 144, 0.25) !important;
+}
+
+.footer-form{
+  display: flex; 
+  justify-content: space-around; 
+  align-items: center; 
+  margin-top: 4em;
+}
+
+  /* Invalid */
+  .invalid-field{
+    border: 1px solid red;
+  }
+
+  .invalid-span{
+    color: red;
+    margin-top: .3em;
+  }

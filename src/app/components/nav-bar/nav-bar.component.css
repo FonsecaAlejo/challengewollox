@@ -101,3 +101,7 @@ nav ul li a:hover{
     background: #2AA7DF;
     color: #fff !important;
   }
+
+.active-button-a{
+    color: gray !important;
+}

@@ -7,10 +7,10 @@
    </div>
    <div class="menu">
       <ul>
-         <li><a class="button" routerLink='home'>Inicio</a></li>
+         <li><a routerLink='home'>Inicio</a></li>
          <li *ngIf="!auth"><a class="button-blue" routerLinkActive="active-button-blue" routerLink='sign-up' >Sign up</a></li>
          <li *ngIf="auth && (favoriteTech != null)"><a>Tecnologías favoritas: {{favoriteTech.length}}</a></li>
-         <li *ngIf="auth" routerLinkActive="activo"><a routerLink="technology-list">Lista de tecnologías</a></li>
+         <li *ngIf="auth" routerLinkActive="activo"><a routerLinkActive="active-button-a" routerLink="technology-list">Lista de tecnologías</a></li>
          <li *ngIf="auth"><a class="button-danger" style="cursor: pointer;" (click)="logOut()">Salir</a></li>
       </ul>
    </div>
