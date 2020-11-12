@@ -98,5 +98,6 @@ nav ul li a:hover{
 }
 
 .active-button-blue {
-    background: #2AA7DF;  
+    background: #2AA7DF;
+    color: #fff !important;
   }
