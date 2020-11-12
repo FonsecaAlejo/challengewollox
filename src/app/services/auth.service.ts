@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { UserModel } from '../models/user.model';
 import { map } from "rxjs/operators";
+import { environment } from "../../environments/environment.prod";
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +15,6 @@ export class AuthService {
 
   }
 
-  private url = "http://private-8e8921-woloxfrontendinverview.apiary-mock.com"
-
   userToken: string;
 
  //SignIn
@@ -24,7 +23,7 @@ export class AuthService {
   signUp( user: UserModel){
 
     return this.http.post(
-      `${this.url}/signup`,
+      environment.endPointSignUp,
       user
     ).pipe(
       map(resp => {

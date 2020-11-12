@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { TechnologyModel } from '../models/technology.model';
+import { environment } from "../../environments/environment.prod";
 
 @Injectable({
   providedIn: 'root'
@@ -12,12 +13,12 @@ export class TecnologyListService {
 
   constructor( private http: HttpClient) { }
 
-  private url: string = "http://private-8e8921-woloxfrontendinverview.apiary-mock.com/techs";
+  
 
 
   getTechnologyList(){
 
-    return  this.http.get(`${this.url}`);
+    return  this.http.get(environment.endPointTechnologyList);
   }
 
   searchTechnology(search: string, technologies: TechnologyModel[]){
