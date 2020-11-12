@@ -1,5 +1,12 @@
 .content{
     max-width: 1800px;
+    flex: 1/*  */;
+    margin: 0 auto;
+    display: inherit;
+    height: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    flex-wrap: inherit;
 }
 
 /* Section Hero */
@@ -7,8 +14,6 @@
 .hero{
     background: url(../../../assets/Backgrounds/Bg_Header.png);
     height: 100vh;
-    position: absolute;
-    overflow: hidden;
 }
 
 .welcome{
@@ -25,17 +30,124 @@
     width: 10em;
 }
 
-.wolox-font{
-    color: #97CF00;
-}
-
 .welcome img{
     width: 40em;
     height: 40em;
 
 }
 
+/* Section Follow */
+/* ---------------------------------- */
 .follow{
-    background-color: #F2F5FA;
-    overflow: hidden;
+   display: flex;
+}
+
+.follow-wolox{
+    height: 34em;
+    width: 100%;
+    background-image: url(../../../assets/img_woloxer@3x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.follow-wolox h1{
+    font-size: 4em;
+}
+
+.content-follow-wolox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-follow-wolox div{
+    text-align: center;
+}
+
+.content-follow-wolox img{
+    width: 3em;
+    height: 3em;
+    margin: 1em;
+}
+
+.content-follow-wolox h1{
+    font-weight: 100;
+    font-size: 2em;
+}
+
+.content-follow-wolox a{
+    text-decoration:none;
+    color: white !important;
+}
+
+.follow-text{
+    width: 100%;
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    background: #F2F5FA;
+}
+
+.follow-text h1{
+    font-size: 3em;
+    font-weight: 100;
+    width: 10em;
+    text-align: center;
+}
+
+.follow-text span{
+    font-weight: 600;
+}
+
+/* Section Benefits */
+/* ---------------------------------- */
+.benefits{
+    text-align: center;
+}
+
+.benefits h1{
+    margin: 3em 0;
+}
+
+.content-benefits{
+    height: 13em;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.content-benefits article{
+    margin: 2em;
+}
+
+.content-benefits article h2{
+    max-width: 8em;
+}
+
+/* Section Footer */
+/* ---------------------------------- */
+footer {
+    background: url(../../../assets/Backgrounds/Bg_Footer@3x.png);
+    background-size: cover;
+    height: 34em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer div{
+    text-align: center;
+}
+
+footer div a{
+    margin-top: 3em;
+    text-decoration: none;
+}
+
+footer img{
+    width: 8em;
 }

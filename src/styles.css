@@ -7,3 +7,66 @@ html,body{
     font-size: 16px;
     font-family: 'Fira Sans', sans-serif;;
 }
+
+/* Text color*/
+.text-green{
+  color: #97CF00;
+}
+
+.text-blue{
+  color: #00A9E5;
+}
+
+.text-white{
+  color: white;
+}
+
+/* Buttons */
+
+.button-blue {
+    color: #2AA7DF !important;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0.5em 3.5em;
+    background: rgba(0,0,0,0);
+    border-radius: 20px;
+    border: 1px solid #2AA7DF;
+    transition: all .5s ease;
+    position: relative;
+}
+.button-blue:hover {
+    background: #2AA7DF;
+    color: #fff !important;
+}
+
+.button-danger {
+  color: #E74C3C !important;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0.5em 1.2em;
+  background: rgba(0,0,0,0);
+  border-radius: 20px;
+  border: 1px solid #E74C3C;
+  transition: all .5s ease;
+  position: relative;
+}
+.button-danger:hover {
+  background: #E74C3C;
+  color: #fff !important;
+}
+
+.button-white {
+  color: #fff !important;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0.5em 3.5em;
+  background: #2AA7DF;
+  border-radius: 20px;
+  border: 1px solid #2AA7DF;
+  transition: all .5s ease;
+  position: relative;
+}
+.button-white:hover {
+  background: rgba(0,0,0,0);
+  color: #2AA7DF !important;
+}
