@@ -33,6 +33,7 @@ html,body{
     border: 1px solid #2AA7DF;
     transition: all .5s ease;
     position: relative;
+    cursor: pointer;
 }
 .button-blue:hover {
     background: #2AA7DF;
@@ -49,6 +50,7 @@ html,body{
   border: 1px solid #E74C3C;
   transition: all .5s ease;
   position: relative;
+  cursor: pointer;
 }
 .button-danger:hover {
   background: #E74C3C;
@@ -65,10 +67,16 @@ html,body{
   border: 1px solid #2AA7DF;
   transition: all .5s ease;
   position: relative;
+  cursor: pointer;
 }
 .button-white:hover {
   background: rgba(0,0,0,0);
   color: #2AA7DF !important;
+}
+
+
+button:focus {
+  outline: none;
 }
 
 /* Input */
