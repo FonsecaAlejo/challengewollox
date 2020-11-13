@@ -6,25 +6,23 @@ import { AppComponent } from './app.component';
 
 //Modulos
 import { LoginModule } from './components/login/login.module';
+import { HomeModule } from './components/home/home.module';
 import { TranslatesModule } from './translates.module';
-
-import { HomeComponent } from './components/home/home.component';
-import { NavBarComponent } from './components/nav-bar/nav-bar.component';
-import { TechnologyListComponent } from './components/technology-list/technology-list.component';
+import { NavBarModule } from './components/nav-bar/nav-bar.module';
+import { TechnologyListModule } from './components/technology-list/technology-list.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    NavBarComponent,
-    TechnologyListComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    TranslatesModule,
+    NavBarModule,
+    HomeModule,
     LoginModule,
-    TranslatesModule
-    
+    TechnologyListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
