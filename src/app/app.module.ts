@@ -6,9 +6,11 @@ import { AppComponent } from './app.component';
 
 //Modulo login
 import { LoginModule } from './components/login/login.module';
+
 import { HomeComponent } from './components/home/home.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { TechnologyListComponent } from './components/technology-list/technology-list.component';
+import { TranslatesModule } from './translates.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { TechnologyListComponent } from './components/technology-list/technology
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LoginModule
+    LoginModule,
+    TranslatesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

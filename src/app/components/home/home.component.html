@@ -1,7 +1,7 @@
 <section class="hero">
     <div class="content">
         <div class="welcome">
-            <h1>Bienvenido a tu <strong>Entrevista Técnica</strong> en <strong class="text-green">Wolox</strong></h1>
+            <h1>{{'titleWelcome-1' | translate }} <strong>{{'titleWelcome-2' | translate }}</strong> {{'titleWelcome-3' | translate }} <strong class="text-green">{{'titleWelcome-4' | translate }}</strong></h1>
             <img src="https://github.com/FonsecaAlejo/challengewollox/blob/main/src/assets/Img%20Hero/Ic_ilustra_Hero@3x.png?raw=true" alt="Ilustra Hero">
         </div>
     </div>
@@ -16,56 +16,59 @@
                 <h1 class="text-white">@Wolox</h1>
             </div>
             <div class="content-follow-wolox">
-                <a class="button-blue" href="https://twitter.com/Wolox" target="_blank">Síguenos</a>
+                <a class="button-blue" href="https://twitter.com/Wolox" target="_blank">{{'follow-button' | translate }}</a>
             </div>
         </div>
     </div>
     <div class="follow-text">
-        <h1>Trabajamos para <span class="text-blue">convertir</span> <span class="text-green"> ideas</span> en productos</h1>
+        <h1>{{'titleFollow-1' | translate }} <span class="text-blue">{{'titleFollow-2' | translate }}</span>
+            <span class="text-green"> {{'titleFollow-3' | translate }}</span> {{'titleFollow-4' | translate }}</h1>
     </div>
 </section>
 
 <section class="benefits">
-    <h1>Entre los beneficios que ofrecemos se encuentran <span class="text-blue">;)</span></h1>
+    <h1>{{'titleBenefits' | translate }} <span class="text-blue">;)</span></h1>
     <div class="content-benefits">
         <article>
             <img src="https://raw.githubusercontent.com/FonsecaAlejo/challengewollox/33823add1b2710c07be01add0331d48f8fdc87ee/src/assets/Ic_Hour.svg"
                  alt="Icon Hour">
-            <h2>Flexibilidad horaria</h2>
+            <h2>{{'benefit-1' | translate }}</h2>
         </article>
         <article>
             <img src="https://raw.githubusercontent.com/FonsecaAlejo/challengewollox/33823add1b2710c07be01add0331d48f8fdc87ee/src/assets/Ic_HomeOffice.svg"
                  alt="Icon Home Office">
-            <h2>Home Office</h2>
+            <h2>{{'benefit-2' | translate }}</h2>
         </article>
         <article>
             <img src="https://raw.githubusercontent.com/FonsecaAlejo/challengewollox/33823add1b2710c07be01add0331d48f8fdc87ee/src/assets/Ic_Workshops.svg"
                  alt="Icon Workshops">
-            <h2>Capacitaciones</h2>
+            <h2>{{'benefit-3' | translate }}</h2>
         </article>
         <article>
             <img src="https://raw.githubusercontent.com/FonsecaAlejo/challengewollox/33823add1b2710c07be01add0331d48f8fdc87ee/src/assets/Ic_DrinkSnacks.svg"
                  alt="Icon Drink Snacks">
-            <h2>Snacks, frutas y bebidas gratis</h2>
+            <h2>{{'benefit-4' | translate }}</h2>
         </article>
         <article>
             <img src="https://raw.githubusercontent.com/FonsecaAlejo/challengewollox/33823add1b2710c07be01add0331d48f8fdc87ee/src/assets/Ic_laptop.svg"
                  alt="Icon Laptop">
-            <h2>Semana remota</h2>
+            <h2>{{'benefit-5' | translate }}</h2>
         </article>
         <article>
             <img src="https://raw.githubusercontent.com/FonsecaAlejo/challengewollox/33823add1b2710c07be01add0331d48f8fdc87ee/src/assets/Ic_brain.svg"
                  alt="Icon Brain">
-            <h2>Trabajar en últimas Tecnologías</h2>
+            <h2>{{'benefit-6' | translate }}</h2>
         </article>
     </div>
 </section>
 
+<button class="button-radius lang" (click)="changeLang(!lang)" >{{'lang' | translate }}</button>
+
 <footer>
     <div>
-        <h1>Gracias por <span class="text-blue">completar el ejercicio</span></h1>
-        <h2>Te invitamos a ver mas información</h2>
-        <a class="button-white" href="https://www.wolox.com.ar/" target="_blank">Conocer más</a>
+        <h1>{{'titleFooter-1' | translate }} <span class="text-blue">{{'titleFooter-2' | translate }}</span></h1>
+        <h2>{{'invitationFooter' | translate }}</h2>
+        <a class="button-white" href="https://www.wolox.com.ar/" target="_blank">{{'knowMore-button' | translate }}</a>
     </div>
     <img src="https://raw.githubusercontent.com/FonsecaAlejo/challengewollox/33823add1b2710c07be01add0331d48f8fdc87ee/src/assets/Ic_Wolox_Footer.svg"
          alt="Icon Wolox footer">
