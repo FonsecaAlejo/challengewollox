@@ -11,20 +11,10 @@ import { TranslateHttpLoader } from "@ngx-translate/http-loader";
   imports: [
     CommonModule,
     HttpClientModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: httpTranslateLoader,
-        deps: [HttpClient]
-      }
-    })
+    
   ],
   exports: [
     TranslateModule
   ]
 })
 export class TranslatesModule { }
-
-export function httpTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(http, '../assets/i18n/','.json');
-}
