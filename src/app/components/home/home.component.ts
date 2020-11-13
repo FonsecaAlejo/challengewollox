@@ -15,8 +15,7 @@ export class HomeComponent implements OnInit {
   constructor(  private authService: AuthService,
                 private router: Router,
                 public translate: TranslateService) { 
-                  translate.addLangs(['es', 'en']);
-                  translate.setDefaultLang('es');
+                  
                 }
 
   ngOnInit(): void {
