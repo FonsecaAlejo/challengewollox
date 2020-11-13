@@ -42,5 +42,5 @@ import { TranslatesModule } from './translates.module';
 export class AppModule { }
 
 export function httpTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(http);
+  return new TranslateHttpLoader(http, 'https://fonsecaalejo.github.io/challengewollox/assets/i18n/','.json');
 }
