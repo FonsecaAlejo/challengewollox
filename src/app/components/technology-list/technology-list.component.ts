@@ -30,7 +30,7 @@ export class TechnologyListComponent implements OnInit {
 
   searchTechnology(search: string){
 
-    if(search == ''){
+    if(search.length < 2){
       return;
     }
 

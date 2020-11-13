@@ -1,9 +1,85 @@
-img{
-    margin: 1px;
+.section-technology{
+    display: flex;
 }
-h1{
-    margin: 1px;
+
+.container-search{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    width: 30%;
 }
-p{
-    margin: 1px;
+
+.container-search label{
+    font-size: 2em;
+    margin-left: 1em;
+}
+
+.container-search input{
+    width: 95%;
+    height: 3em;
+    margin: 1em;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.container-search input:focus{
+    border: 1.5px solid #2AA7DF;
+    outline: none;
+}
+
+.found{
+    height: 4em;
+}
+
+.found h1{
+    margin-left: 1em;
+    font-weight: 100;
+}
+
+.container-technologys{
+    margin-top: 8em;
+    display:grid;
+    grid-template-columns: repeat(2,minmax(10em,37em));
+    justify-content: center;
+    grid-gap: 28px;
+    width: 70%;
+}
+
+.box-technology{
+    margin: 1em;
+    padding: 2%;
+    height: 24em;
+    width: 35em;
+    border-radius: 1em;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.box-technology h1{
+    text-align: center;
+    font-size: 3em;
+    margin: 0;
+}
+
+.information-tech{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.information-tech p{
+    font-size: 1.3em;
+}
+
+.information-tech span{
+    font-weight: 500;
+}
+
+.box-technology img{
+    width: 10em;
 }
